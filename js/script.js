@@ -60,7 +60,12 @@ console.log(timerGg, timerHour, timerMinute, timerSeconds);
 
 
 
-setInterval(timer, 1000);
+const time = setInterval(timer, 1000);
+
+
+if(timerGg == 0 && timerHour == 0 && timerMinute == 0 && timerSeconds == 0){
+    clearInterval(time);
+}
 
 
 
