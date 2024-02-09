@@ -33,17 +33,13 @@ let seconds = 0;
 const data = new Date();
 
 // prendiamo il numero del giorno corrente
-let currentGg = 9; 
-// data.getDate();
+let currentGg = data.getDate();
 // prendiamo l'ora corrente
-let currentHour = 16; 
-// data.getHours();
+let currentHour = data.getHours();
 // prendiamo i minuti correnti
-let currentMinute = 0;  
-// data.getMinutes();
+let currentMinute =  data.getMinutes();
 // prendiamo i secondi correnti
-let currentSeconds =0; 
-// data.getSeconds();
+let currentSeconds = data.getSeconds();
 
 
 // giorni per il timer
