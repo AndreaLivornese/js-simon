@@ -1,0 +1,9 @@
+#timer-container{
+    height: 100vh;
+
+    font-size: 30px;
+
+    line-height: 2;
+
+    font-weight: bold;
+}
