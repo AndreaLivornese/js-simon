@@ -21,6 +21,8 @@ Da questi calcoli ci troviamo il tempo che rimane fino alla data del giorno scel
 
 
 
+
+
 // variabili che rappresentano il giorno l'ora minuti e secondi di quando deve terminare il timer
 
 let gg = 12;
@@ -57,6 +59,8 @@ let timerSeconds = 0;
 dateSubtraction();
 
 console.log(timerGg, timerHour, timerMinute, timerSeconds);
+
+
 
 
 
@@ -97,7 +101,7 @@ function dateSubtraction(){
 
         hours--;
 
-        timerMinute = seconds - currentMinute;
+        timerMinute = minutes - currentMinute;
     }
 
     if(hours >= currentHour){
