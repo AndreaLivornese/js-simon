@@ -11,14 +11,11 @@ Ipotiziamo che si apre la pagina  alle 16:00 del 09/02/2024
 dobbiammo calcolare quanti giorni quante ore quanti minuti e secondi mancano alle 9:30 di lunedì 12 Febbraio.
 Per prima cosa con Date possiamo prendere la data corrente
 
-Bisognerebbe sottrarre il giorno stabilito meno 1, il giorno corrente
-sottrare a 24 le ore correnti
-sottrare a 0 minuti i minuti correnti 
-sottrarre a 0 secondi i secondi correnti
-Da questi calcoli ci troviamo il tempo che rimane fino alla mezzanotte del giorno scelto
-
-Successivamente bisogna addizionare al risultato di prima l'orario scelto nella giornata voluta (in questo caso 9 e 30 del mattino)
-così conosciamo il tempo in giorni ore minuti e secondi che mancano.
+Bisognerebbe sottrarre al giorno stabilito, il giorno corrente
+sottrare al'ora stabilita  le ore correnti
+sottrare ai minuti stabiliti i minuti correnti 
+sottrarre ai secondi stabiliti i secondi correnti
+Da questi calcoli ci troviamo il tempo che rimane fino alla data del giorno scelto
 
 */
 
@@ -64,6 +61,8 @@ dateSubtraction();
 console.log(timerGg, timerHour, timerMinute, timerSeconds);
 
 
+
+setInterval(timer, 1000);
 
 
 
@@ -112,5 +111,32 @@ function dateSubtraction(){
         timerGg = gg - currentGg;
 
     }
+
+}
+
+
+
+
+
+
+function timer(){
+
+    if(timerSeconds > 0){
+        timerSeconds--
+    }else{
+        timerSeconds = 60;
+        timerMinute--;
+    }
+
+    if(timerMinute < 1){
+        timerHour--;
+    }
+
+    if(timerHour < 1){
+        timerGg--;
+    }
+
+
+    console.log(timerGg, timerHour, timerMinute, timerSeconds);
 
 }
