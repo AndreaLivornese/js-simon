@@ -33,7 +33,6 @@ let seconds = 0;
 
 // prendiamo la data corrente
 const data = new Date();
-console.log(data);
 
 // prendiamo il numero del giorno corrente
 let currentGg = data.getDate();
@@ -58,18 +57,23 @@ let timerSeconds = 0;
 
 dateSubtraction();
 
-console.log(timerGg, timerHour, timerMinute, timerSeconds);
 
 
+document.querySelector("#btn-start").addEventListener("click", 
+    function(){
 
+        const time = setInterval(timer, 1000);
+        
+        document.querySelector("#timer").style.display = "block";
+        
+        if(timerGg == 0 && timerHour == 0 && timerMinute == 0 && timerSeconds == 0){
+            clearInterval(time);
+        }
 
-
-const time = setInterval(timer, 1000);
-
-
-if(timerGg == 0 && timerHour == 0 && timerMinute == 0 && timerSeconds == 0){
-    clearInterval(time);
 }
+
+)
+
 
 
 
