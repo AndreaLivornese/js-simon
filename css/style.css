@@ -1,9 +1,32 @@
+body{
+    background-color: #FF8911;
+}
+
+
+
+#btn-start{
+    margin-bottom: 100px;
+
+    border:1px solid #7F27FF;
+    border-radius:5px;
+    box-shadow: 2px 5px 10px black;
+    
+    background-color: #9F70FD;
+}
+
+
 #timer-container{
-    height: 100vh;
 
     font-size: 30px;
-
+    color:white;
+    
     line-height: 2;
 
     font-weight: bold;
 }
+
+#timer{
+    padding: 20px;;
+    background-color: rgba(0, 0, 0, .7);
+}
+
