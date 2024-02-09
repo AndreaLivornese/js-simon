@@ -31,6 +31,7 @@ let seconds = 0;
 
 // prendiamo la data corrente
 const data = new Date();
+console.log(data);
 
 // prendiamo il numero del giorno corrente
 let currentGg = data.getDate();
@@ -130,10 +131,12 @@ function timer(){
     }
 
     if(timerMinute < 1){
+        timerMinute = 60;
         timerHour--;
     }
 
     if(timerHour < 1){
+        timerHour =24;
         timerGg--;
     }
 
