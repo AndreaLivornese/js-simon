@@ -46,12 +46,13 @@ let currentSeconds =0;
 // data.getSeconds();
 
 
+// giorni per il timer
 let timerGg = 0;
-
+// ore per il timer
 let timerHour = 0;
-
+// minuti per il timer
 let timerMinute = 0;
-
+// secondi per il timer
 let timerSeconds = 0;
 
 
@@ -66,6 +67,10 @@ setInterval(timer, 1000);
 
 
 
+const timerEl = document.querySelector("#timer");
+
+
+// funzioni 
 
 function dateSubtraction(){
 
@@ -137,6 +142,6 @@ function timer(){
     }
 
 
-    console.log(timerGg, timerHour, timerMinute, timerSeconds);
+    timerEl.innerHTML = `Mancano esattamente <br> ${timerGg} giorni ${timerHour} ore ${timerMinute} minuti ${timerSeconds} secondi <br> alle 9:30 di Lunedì 12 Febbraio`
 
 }
