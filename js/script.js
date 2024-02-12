@@ -34,6 +34,9 @@ let seconds = 0;
 // prendiamo la data corrente
 const data = new Date();
 
+// oggetto della duta stabilita
+const finalData = new Date("12-02-2024 9:30");
+
 // prendiamo il numero del giorno corrente
 let currentGg = data.getDate();
 // prendiamo l'ora corrente
@@ -62,13 +65,25 @@ dateSubtraction();
 document.querySelector("#btn-start").addEventListener("click", 
     function(){
 
-        const time = setInterval(timer, 1000);
-        
-        document.querySelector("#timer").style.display = "block";
-        
-        if(timerGg == 0 && timerHour == 0 && timerMinute == 0 && timerSeconds == 0){
-            clearInterval(time);
+
+        // controllo se il timer non è scaduto
+        if(data.getTime() < finalData.getTimer){
+            const time = setInterval(timer, 1000);
+            
+            document.querySelector("#timer").style.display = "block";
+            
+            if(timerGg == 0 && timerHour == 0 && timerMinute == 0 && timerSeconds == 0){
+                clearInterval(time);
+            }
+
+        }else{
+
+            document.querySelector("#timer").style.display = "block";
+            timerEl.innerHTML = `Timer scaduto`;
+
         }
+
+
 
 }
 
